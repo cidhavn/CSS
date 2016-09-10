@@ -1,0 +1,98 @@
+/* HTML Sample */
+/*
+<div style="padding: 50px 200px;">
+  <div style="width: 100px;" data-error="validate error">
+    <input type="text" id="number" style="width: inherit;" />
+  </div>
+</div>
+*/
+
+div[data-error] {
+  position: relative;
+  left: inherit;
+  top: inherit;
+}
+
+div[data-error]:before {
+  /* 箭頭 */
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 8px;
+  
+  /* 上 */
+  /*
+  bottom: 100%;
+  left: 50%;  
+  border-color: #c34242 transparent transparent transparent;
+  margin-bottom: -6px;
+  */
+  
+  /* 下 */
+  /*
+  top: 100%;
+  left: 50%;  
+  border-color: transparent transparent #c34242 transparent;
+  margin-top: -6px;
+  */
+  
+  /* 左 */
+  
+  top: 0;
+  right: 100%;  
+  border-color: transparent transparent transparent #c34242;
+  margin-top: 5px;
+  margin-right: -5px;
+  
+  
+  /* 右 */
+  /*
+  top: 0;
+  left: 100%;  
+  border-color: transparent transparent transparent #c34242;
+  margin-top: 5px;
+  border-color: transparent #c34242 transparent transparent;
+  */
+}
+
+div[data-error]:after {
+  /* 文字*/
+  content: attr(data-error);
+  position: absolute;
+  z-index: 1000;
+  background-color: #c34242;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: #FFFFFF;
+  white-space: nowrap;
+  
+  /* 上 */
+  /*
+  bottom: 100%;
+  left: 50%;
+  margin-left: -50%;
+  margin-bottom: 10px;
+  */
+  
+  /* 下 */
+  /*
+  top: 100%;
+  left: 50%;
+  margin-left: -50%;
+  margin-top: 10px;
+  */
+  
+  /* 左 */
+  
+  top: 0;
+  right: 100%;
+  margin-right: 10px;
+  
+  
+  /* 右 */
+  /*
+  top: 0;
+  left: 100%;
+  margin-left: 15px;
+  */
+}
