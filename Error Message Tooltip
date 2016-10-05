@@ -13,7 +13,7 @@ div[data-error] {
   top: inherit;
 }
 
-div[data-error] input {
+div[data-error] input[type=text] {
     border: 1px solid #ba0202;
     outline: #b03939 solid 1px;
 }
