@@ -15,7 +15,6 @@ div[data-error] {
 
 div[data-error] input[type=text] {
     border: 1px solid #ba0202;
-    outline: #b03939 solid 1px;
 }
 
 div[data-error]:before {
